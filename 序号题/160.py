@@ -57,4 +57,13 @@ class Solution:
                 headB=headB.next
         return res
 
-
+#方法三：设两个链表A，B长度分别为a+c和b+c，有a+c+b=b+c+a，即A链表走到头后从B链表头开始走，同理B链表走到头后从A链表开始走，
+# 如果有相同节点，两者会相遇，如果没有相同节点，两者最终都走到空链表后返回
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+        A=headA
+        B=headB
+        while A!=B:
+            A=A.next if A!=None else headB
+            B=B.next if B!=None else headA
+        return A
