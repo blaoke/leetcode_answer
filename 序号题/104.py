@@ -8,7 +8,7 @@ class TreeNode:
 class Solution:
     def maxDepth(self, root: TreeNode) -> int:
         if root==None:
-            return 1
+            return 0
         maxright=self.maxDepth(root.right)+1
         maxleft=self.maxDepth(root.left)+1
         return max(maxleft,maxright)
