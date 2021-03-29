@@ -4,11 +4,14 @@ class Solution:
     def findRepeatNumber(self, nums: [int]) -> int:
         n=len(nums)
         for i in range(n):
-            a=nums[i]
-            while a!=i:
+            while nums[i]!=i:
+                a=nums[i]
                 if nums[a]!=a:
                     nums[a],nums[i]=nums[i],nums[a]#交换位置
                 else:
                     return a
+a=Solution()
+b=a.findRepeatNumber(nums=[2, 3, 1, 0, 2, 5, 3])
+print(b)
 
 

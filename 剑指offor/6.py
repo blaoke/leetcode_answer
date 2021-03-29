@@ -37,6 +37,16 @@ class Solution:
         di(head)
         return res
 
+#使用python 灵活的deque解决,前序插入
+from collections import deque
+class Solution:
+    def reversePrint(self, head: ListNode) -> ListNode:
+        a=deque()
+        while head:
+            a.appendleft(head.val)
+            head=head.next
+        return list(a)
+
 
 
 
