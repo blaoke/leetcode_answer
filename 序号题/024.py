@@ -20,4 +20,4 @@ class Solution:
         return pre.next
 
 #p-1-2-3 变成 p-2 1-3 2-1即p-2-1-3                 
-在头节点之前创立空节点pre，令cur表示当前到达的节点，初始时，cur=pre，每次交换cur后面的两个
+#在头节点之前创立空节点pre，令cur表示当前到达的节点，初始时，cur=pre，每次交换cur后面的两个

@@ -18,16 +18,17 @@ class Solution:
         ans=None
         res=0
         while stack1 or stack2 or res!=0: #如果两个栈有一个非空，res用于记录大于十的进位
-        	a=0 if not stack1 else stack1.pop()
-        	b=0 if not stack2 else stack2.pop()
-        	cur=a+b+res
-        	res=0
-        	if cur>9:
-	        	res=cur//10
-	        	cur=cur%10
-        	ret=ListNode(cur) #这里使用的头插法也是一个重点
-        	ret.next=ans
-        	ans=ret
+
+            a=0 if not stack1 else stack1.pop()
+            b=0 if not stack2 else stack2.pop()
+            cur=a+b+res
+            res=0
+            if cur>9:
+                res=cur//10
+                cur=cur%10
+            ret=ListNode(cur) #这里使用的头插法也是一个重点
+            ret.next=ans
+            ans=ret
         return ans
 
 
